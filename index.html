@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clima del Mundo</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="shortcut icon" href="./img/favicon-32x32.png" type="image/x-icon">
+  </head>
+  <body>
+    <div class="container">
+      <img src="./img/logo.webp" alt="Logo" class="logo" />
+      <h1>Consulta el Clima</h1>
+      <input type="text" id="city" placeholder="Ingresa la ciudad" />
+      <button onclick="getWeather()">Obtener Clima</button>
+      <button id="clear" onclick="clearWeather()">Limpiar</button>
+
+      <div class="weather-info" id="weather-info">
+        <!-- Los detalles del clima se mostrarán aquí -->
+      </div>
+    </div>
+
+    <script src="./js/app.js"></script>
+  </body>
+</html>
