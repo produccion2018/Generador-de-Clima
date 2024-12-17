@@ -1,151 +1,185 @@
-/* Importar fuente desde Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
-
 /* Estilos generales */
 body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #f0f8ff; /* Fondo celeste */
-  margin: 0;
-  padding: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  flex-direction: column;
-  background: linear-gradient(135deg, #f0f8ff 0%, #d1eaff 100%); /* Fondo degradado */
-}
-
-/* Contenedor principal */
-.container {
-  background-color: #fff;
-  padding: 30px;
-  border-radius: 16px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  width: 100%;
-  max-width: 600px;
-  margin: 0 auto;
-  text-align: center;
-  position: relative;
-  z-index: 1;
-  overflow: hidden;
-}
-
-/* Efecto especular en el contenedor */
-.container::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(135deg, #ffffff33 0%, rgba(0, 0, 0, 0.1) 100%);
-  transform: rotate(180deg);
-  pointer-events: none;
-  z-index: -1;
-}
-
-/* Logo con opacidad y bordes */
-.logo {
-  width: 120px; /* Ajusta el tamaño según sea necesario */
-  height: auto;
-  margin-bottom: 20px;
-  border: 2px solid #008080; /* Borde verde */
-  border-radius: 50%; /* Bordes redondeados */
-  opacity: 0.8; /* Opacidad del logo */
-  transition: opacity 0.3s ease;
-}
-
-.logo:hover {
-  opacity: 1; /* Cambiar opacidad al pasar el mouse */
-}
-
-/* Estilo del título */
-h1 {
-  font-size: 2.5rem;
-  color: #008080; /* Verde oscuro */
-  margin-bottom: 20px;
-  text-transform: uppercase;
-  font-weight: 600;
-  letter-spacing: 2px;
-}
-
-/* Estilo del campo de entrada de ciudad */
-input[type="text"] {
-  padding: 12px;
-  width: 80%;
-  margin-top: 20px;
-  border: 2px solid #008080; /* Verde oscuro */
-  border-radius: 6px;
-  font-size: 1.1rem;
-  text-align: center;
-  transition: border-color 0.3s ease;
-}
-
-input[type="text"]:focus {
-  outline: none;
-  border-color: #f39c12; /* Amarillo */
-}
-
-/* Estilo de los botones */
-button {
-  padding: 14px 24px;
-  background-color: #00b894; /* Verde */
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 1.1rem;
-  margin-top: 15px;
-  transition: background-color 0.3s ease;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-button:hover {
-  background-color: #00cec9; /* Verde más claro */
-}
-
-button:active {
-  background-color: #00b894;
-  transform: scale(0.98);
-}
-
-/* Estilo del botón Limpiar */
-button#clear {
-  background-color: #f39c12; /* Amarillo */
-}
-
-button#clear:hover {
-  background-color: #f1c40f; /* Amarillo más claro */
-}
-
-/* Estilo de la sección de información del clima */
-.weather-info {
-  margin-top: 20px;
-  background-color: #dff9fb; /* Celeste claro */
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px #0000001a;
-}
-
-.weather-info h2 {
-  color: #008080; /* Verde oscuro */
-  margin-bottom: 10px;
-  font-size: 1.5rem;
-}
-
-.weather-info p {
-  margin: 5px 0;
-  font-size: 1rem;
-  color: #333;
-}
-
-/* Efecto de hover en los botones */
-button:hover,
-button#clear:hover {
-  transform: scale(1.05); /* Aumentar tamaño al hacer hover */
-}
-
-/* Agregar animación de transición */
-.container, .weather-info, button {
-  transition: all 0.3s ease;
-}
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f8ff; /* Fondo celeste suave */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    color: #333; /* Color de texto más oscuro */
+    overflow: hidden; /* Evita el desbordamiento */
+  }
+  
+  /* Contenedor principal */
+  .container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    position: relative;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+  }
+  
+  .container:hover {
+    transform: translateY(-6px); /* Efecto al pasar el ratón */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Mejora de sombra */
+  }
+  
+  /* Efecto especular en el contenedor */
+  .container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #ffffff33 0%, rgba(0, 0, 0, 0.1) 100%);
+    transform: rotate(180deg);
+    pointer-events: none;
+    z-index: -1;
+  }
+  
+  /* Logo con bordes y opacidad */
+  .logo {
+    width: 130px;
+    height: auto;
+    margin-bottom: 20px;
+    border: 3px solid #008080;
+    border-radius: 50%;
+    opacity: 0.85;
+    transition: opacity 0.4s ease, transform 0.3s ease;
+  }
+  
+  .logo:hover {
+    opacity: 1;
+    transform: scale(1.08); /* Sutil animación al pasar el ratón */
+  }
+  
+  /* Estilo del título */
+  h1 {
+    font-size: 2.5rem;
+    color: #008080;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-family: 'Poppins', sans-serif;
+    transition: color 0.3s ease;
+  }
+  
+  h1:hover {
+    color: #f39c12; /* Cambiar color al pasar el ratón */
+  }
+  
+  /* Estilo del campo de entrada de ciudad */
+  input[type="text"] {
+    padding: 12px;
+    width: 100%;
+    margin-top: 15px;
+    border: 2px solid #008080;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    text-align: center;
+    background-color: #f8f9fa;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+  }
+  
+  input[type="text"]:focus {
+    outline: none;
+    border-color: #f39c12;
+    background-color: #fff;
+  }
+  
+  /* Estilo de los botones */
+  button {
+    padding: 16px 32px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%;
+    margin-top: 15px;
+    border: none;
+  }
+  
+  /* Estilo del botón Obtener Clima */
+  button.btn-primary {
+    background-color: #008080;
+    color: #fff;
+  }
+  
+  button.btn-primary:hover {
+    background-color: #006666;
+    transform: scale(1.05);
+  }
+  
+  button.btn-primary:active {
+    transform: scale(0.98);
+  }
+  
+  /* Estilo del botón Limpiar */
+  button#clear {
+    background-color: #f39c12;
+    color: #fff;
+  }
+  
+  button#clear:hover {
+    background-color: #f1c40f;
+    transform: scale(1.05);
+  }
+  
+  button#clear:active {
+    transform: scale(0.98);
+  }
+  
+  /* Estilo de la sección de información del clima */
+  .weather-info {
+    margin-top: 30px;
+    background-color: #dff9fb;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .weather-info h2 {
+    color: #008080;
+    margin-bottom: 12px;
+    font-size: 1.8rem;
+  }
+  
+  .weather-info p {
+    margin: 8px 0;
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.5;
+  }
+  
+  /* Estilo en pantallas pequeñas */
+  @media (max-width: 576px) {
+    h1 {
+      font-size: 2.2rem;
+    }
+  
+    .logo {
+      width: 110px;
+    }
+  
+    input[type="text"] {
+      font-size: 1rem;
+    }
+  
+    button {
+      font-size: 1rem;
+    }
+  
+    .container {
+      padding: 20px;
+      max-width: 100%;
+    }
+  }
+  
